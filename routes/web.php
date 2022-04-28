@@ -23,16 +23,6 @@ Route::get('/', function () {
 
 
 
-Route::get('/comics', function () {
-    $data = [
-        'books' => config('comics'),
-        'arrSectionBlu' => config('myArr.sectionBlu')
-    ];
-    return view('comics', $data);
-})->name('comics');
-
-
-
 Route::get('/characters', function () {
     $data = [
         'books' => config('comics'),
@@ -40,6 +30,16 @@ Route::get('/characters', function () {
     ];
     return view('characters', $data);
 })->name('characters');
+
+
+
+Route::get('/comics', function () {
+    $data = [
+        'books' => config('comics'),
+        'arrSectionBlu' => config('myArr.sectionBlu')
+    ];
+    return view('comics', $data);
+})->name('comics');
 
 
 
@@ -80,6 +80,46 @@ Route::get('/collectibles', function () {
     ];
     return view('collectibles', $data);
 })->name('collectibles');
+
+
+
+Route::get('/videos', function () {
+    $data = [
+        'books' => config('comics'),
+        'arrSectionBlu' => config('myArr.sectionBlu')
+    ];
+    return view('videos', $data);
+})->name('videos');
+
+
+
+Route::get('/fan', function () {
+    $data = [
+        'books' => config('comics'),
+        'arrSectionBlu' => config('myArr.sectionBlu')
+    ];
+    return view('fan', $data);
+})->name('fan');
+
+
+
+Route::get('/news', function () {
+    $data = [
+        'books' => config('comics'),
+        'arrSectionBlu' => config('myArr.sectionBlu')
+    ];
+    return view('news', $data);
+})->name('news');
+
+
+
+Route::get('/shop', function () {
+    $data = [
+        'books' => config('comics'),
+        'arrSectionBlu' => config('myArr.sectionBlu')
+    ];
+    return view('shop', $data);
+})->name('shop');
 
 
 

@@ -4,6 +4,20 @@
 @import './partial/general';
 
 header {
+    input {
+        margin-left: 20px;
+        border: 0;
+        outline: 0;
+        text-align: end;
+        height: 18px;
+        width: 150px;
+        border-bottom: 2px solid $blu_color;
+        padding: 0 1.5rem 0 0;
+        background-image: url('../images/search.svg');
+        background-repeat: no-repeat;
+        background-position: right .2rem top;
+        background-size: 15px;
+    }
     .line-blu {
         height: 20px;
         background-color: $blu_color;
@@ -375,29 +389,43 @@ footer {
         background-size: cover;
         background-repeat: no-repeat;
         .container {
+            position: relative;
             justify-content: space-between;
             align-items: stretch;
+            .info {
+                position: absolute;
+                bottom: .3rem;
+                left: 0;
+                max-width: 500px;
+                font-weight: 500;
+                color: $grey_color_footer;
+                font-size: .8rem;
+                .text-blu {
+                    color: $blu_color;
+                }
+            }
             .footer-top-left {
                 display: flex;
                 align-items: flex-start;
-                padding: 1.5rem 0 2.5rem ;
+                padding: 1.5rem 0 3.5rem;
+
                 section {
-                padding-right: 1rem;
+                    padding-right: 1rem;
                     ul {
                         list-style: none;
                         a {
-                        text-decoration: none;
-                        font-weight: 500;
-                        color: $grey_color_footer;
-                        font-size: .9rem;
-                        transition: color .25s;
+                            text-decoration: none;
+                            font-weight: 500;
+                            color: $grey_color_footer;
+                            font-size: .9rem;
+                            transition: color .25s;
                             &:hover{
                                 color: #fff;
                             }
                         }
                         h3 {
-                        padding: 1rem 0;
-                        color: #fff;
+                            padding: 1rem 0;
+                            color: #fff;
                         }
                     }
                 }
@@ -409,11 +437,11 @@ footer {
             background-position: center;
             background-size: cover;
         }
-      }
-      .footer-social {
-            background-color: $bg_social;
-            padding: 1.5rem 0;
-            .container {
+    }
+    .footer-social {
+        background-color: $bg_social;
+        padding: 1.5rem 0;
+        .container {
             height: 40px;
             .btn-footer{
                 color: #fff;
@@ -422,6 +450,10 @@ footer {
                 font-size: .9rem;
                 margin-right: auto;
                 cursor: pointer;
+                transition: background-color .25s;
+                &:hover {
+                    background-color: $blu_color;
+                }
             }
             .container-follow {
                 display: flex;
@@ -429,7 +461,12 @@ footer {
                 color: $blu_color;
                 font-weight: bold;
                 img {
-                margin-left: 1rem;
+                    margin-left: 1rem;
+                    transition: opacity .25s, transform .25s;
+                    &:hover {
+                        transform: scale(1.1);
+                        filter: opacity(.7);
+                    }
                 }
             }
         }
