@@ -1,12 +1,14 @@
 @extends('template.base')
 
-@section('title', 'DC Comics')
+@section('title', 'DC Comics - ' . $selectBook['title'])
 
 @section('content')
     <main>
         <div class="blu-space">
             <div class="container">
                 <div class="cont-comic">
+                    <div class="info1">{{ $selectBook['type'] }}</div>
+                    <div class="info2">view gallery</div>
                     <img src="{{ $selectBook['thumb'] }}" alt="">
                 </div>
             </div>
